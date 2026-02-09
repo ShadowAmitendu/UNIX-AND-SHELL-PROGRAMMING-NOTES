@@ -25,7 +25,6 @@ commands were supposed to look like C statements. A compatible version of C shel
 is used in Linux. 
 The Korn shell, developed by David Korn also of the AT&T labs, is the newest and most 
 powerful. Because it was developed at AT&T labs, it is compatible with the Borne shell. 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
 NIX SESSION: 
  
@@ -73,7 +72,6 @@ to parent shell, the child shell is destroyed – it no longer exists. Should yo
 entirely new shell is created. 
  
  
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 LOGOUT: 
@@ -104,7 +102,6 @@ There is a default physical file associated with each stream: standard input is 
 with the keyboard, standard output is associated with monitor and standard error is also 
 associated with the monitor. We can change the default file association using pipes or 
 redirection.
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
 REDIRECTION: 
  
@@ -149,7 +146,6 @@ example.
  
  
                                  
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 $ who > whoOct2 
@@ -188,7 +184,6 @@ only one greater than sign, the system assumes that we are redirecting the outpu
 1). To redirect them both, therefore, we specify the descriptor (0, 1, or 2) and then the 
 redirection operator as shown in below example: 
 $ ls –l file noFile 1> myStdOut 2> myStdErr    
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
  
@@ -225,7 +220,6 @@ $ more myStdOut
 Cannot open file noFile: No such file or directory   -rw-r- - r- - 1 gilberg staff 1234  Oct   2 18:16 file1 
  
  
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 The following table shows the redirection differences between the shells: 
@@ -261,7 +255,6 @@ time as the input of the next command. The first command must be able to send it
 standard output; the second command must be able to read its input from standard input. This 
 command sequence is given as follows: 
 $ who | lpr 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
  
@@ -308,7 +301,6 @@ to combine several commands.
  
 There are four syntactical formats for combining commands in to one line: sequenced, 
 grouped, chained, and conditional. 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 SEQUENCED COMMANDS: 
@@ -344,7 +336,6 @@ $ cp file te pfile && echo   Copy successful
 Copy successful 
 $ cp noFile te pfile || echo  Copy failed  
 Copy failed 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
 COMMAND SUBSTITUTION: 
@@ -386,7 +377,6 @@ editing. The history file is a special UNIX file that contains a list of command
 session. In the C shell, we can use only the history file. The following table summarizes the 
 command line editing options available. 
  
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 Korn Shell 
 lOMoARcPSD|35376734
@@ -430,7 +420,6 @@ available. Because vi starts in the insert mode, however to move to the vi comma
 must use the Escape key. Once in the vi command mode, we can use several of the standard vi 
 commands. The most obvious commands that are not available are the read, write and quit 
 commands. 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
 The basic commands that are available are listed in the table below: 
@@ -503,7 +492,6 @@ Edit and Execute a Previous Command: Assume that we have just executed the more
 command with a misspelled file name. In the next example, we left off the last character of 
 the file a e, suh as  file  athe tha  “ile1  
  
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 1. Move to the command mode by keying Escape (esc).  
@@ -535,7 +523,6 @@ Return. Keying Return at the end of the command starts it in the foreground.
 Suspending a foreground job While a foreground job is running it can be suspended. For 
 example, while you are running a long sort in the foreground, you get a notice that you have 
 mail. 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
  
@@ -581,7 +568,6 @@ the suspended state to the background with the bg command. Because job is in the
 no job number is required. To move a background job to a foreground job, we use the fg 
 command. 
   
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 MULTIPLE BACKGROUND JOBS: 
@@ -603,7 +589,6 @@ tasks but also cannot continue running because some internal status has made com
 impossible. When a job terminates either because it is done or it must exit, it sets a status code 
 that can be checked by the user. The following figure 2.2 summarizes the job states: 
 FIGURE 2.2 JOB STATES 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
  
@@ -648,7 +633,6 @@ $ alias dir=`ls -l`
 $ dir       
 Total 6       -rw- - - - - - - 1 gilberg staff 5782 10 16:19 TheRaven 
        
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 Alias of Multiple Command Lines Often a process requires more than one command. As 
@@ -689,7 +673,6 @@ added after the command. The arguments may contain wildcards as appropriate. For
 we can pass a file to the list command so that it lists only the file(s) requested. 
 $ alias fl= ls –l  
 $ fl f* 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
 + ls –l fgLoop.scr file1 fileOut     -rwx- - - - - - 1 gilberg staff 175 13 10:38 fgLoop.scr -rw-r - - r- - - 1 gilberg staff 15 17 2000 file1 -rw-r - - r- - - 1 gilberg staff 395 9 20:00 fileOut 
  
@@ -731,7 +714,6 @@ $ alias dir
 dir: alias not found 
  
  
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 Aliases in the C Shell: 
@@ -782,7 +764,6 @@ dir
 echo Gilbergs Directory List; ls –l | more 
 f1 
 ls –l \!* | more 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
 Removing Aliases: 
@@ -829,7 +810,6 @@ Predefined Variables:
 Pedefi ed aia les ae used to o figue a use shell e io e t. Fo ea ple a 
 system variable determines which editor is used to edit the command history. Other systems 
 variables store information about the home directory. 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 Shells 
@@ -872,7 +852,6 @@ be no spaces before and after the assignment operator in the Korn and Bash shell
 them. C also accepts the assignment without spaces before and after the assignment operator. 
 Example: % 
 set x = 23 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
 % echo $x   
@@ -914,7 +893,6 @@ TMOUT autologout Defines idle time, in seconds, before shell automatically logs 
   off. 
 VISUAL b VISUAL Pathname of the editor for command line editing. See EDITOR 
   table entry. a Shell variables are in lowercase; environmental variables are in uppercase  bBoth a shell and an environmental variable
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 CDPATH: 
@@ -950,7 +928,6 @@ command uses the value of the HOME variable as the argument. You can change its 
 we do not recommend you change if because if will affect all the commands and scripts that 
 use it. The following example demonstrates how it can be changed to the current working 
 directory. Note that because pwd is a command, it must be enclosed in back quotes. 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
 $ echo $HOME  
@@ -996,7 +973,6 @@ $PS1 KSH>
 KSH> P“  $    
 $ 
   
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 SHELL 
@@ -1036,7 +1012,6 @@ arguments:
 $ set 
 C Shell 
 The C Shell uses the different syntax for changing its shell and environmental variables. 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
  
@@ -1084,7 +1059,6 @@ Vi  Users vi for command-line editing.
 Global (noglob): The global option controls the expansion of wildcard tokens in a 
 command. For example, when the global option is off, the list file (ls) command uses wildcards 
 to match the files in a directory. 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 a
 lOMoARcPSD|35376734
@@ -1130,7 +1104,6 @@ $ set –o verbose
 $ set –o verbose 
 # Turn print commands option on 
 # Turn print commands option off 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
 Display Options: To show all of the options (set or unset), we use the set command with 
@@ -1176,7 +1149,6 @@ For example if we are writing a script it is handy to see the expanded commands 
 are executed. We would do this by turning on the verbose option. When we are through writing 
 the script, we would turn off the verbose option. 
    
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 Any option changed during this session is automatically reset to its default when we log 
@@ -1214,7 +1186,6 @@ For the system profile file, the Bash shell uses the same file as the Korn shell
 (/etc/profile). However for the personal profile file, it uses one of the three files. First it looks 
 fo Bash pofile file  ~/. ash_p ofile  If it does t fi d a p ofile file, it looks fo a logi file 
 (~/.bash_login). 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
 If it does not find a login file, it looks for a generic profile file (~/.profile). Whichever file 
 the Bash finds, it executes it and ignores the rest. The Bash environmental file uses the same 
@@ -1258,7 +1229,6 @@ the common filters:
  
  FILTER ACTION   
  More Passes all data from input to output, with pauses at the end of the each screen of data.  
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 FILTER ACTION 
@@ -1310,7 +1280,6 @@ UNIX provides a powerful utility to concatenate commands. It is known as the cat
 command, or cat for short. It combines one or more files by appending them in the order they 
 are listed in the command. The input can come from the keyboard; the output goes to the 
 monitor.
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
 The basic concept is shown as follows: 
@@ -1351,7 +1320,6 @@ The‘aeV1 o tai s the fi st si li es of  The‘ae
  
 $ cat TheRavenV1 
   
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 Once up on a midnight dreary, while I pondered, weak and 
@@ -1384,7 +1352,6 @@ see them because they have no visual graphic.
 The visual option –v allows us to see control characters, with the exception of the tab, 
 new line, and form feed characters. Unfortunately the way they are printed is not intuitive and 
 is beyond the scope of this text. 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
  
@@ -1432,7 +1399,6 @@ $ cat –n goodStudents catExample
  
 1: There is a tab between the numbers on the next line   
 2: 1^I2^I3^I4^I5 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 DISPLAYING BEGINNING AND END OF FILES: 
@@ -1462,7 +1428,6 @@ Over many a quaint and curious volume of forgotten lore
 tail Command: 
 The tail command also outputs data, only this time from the end of the file. The general 
 format of tail command is tail options inputfile 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
  
@@ -1512,7 +1477,6 @@ either standard input or from one or more file. The format of cut command is as 
 below: 
  
 cut options file list 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 Since cut command looks for columns, we have some way to specify where the columns 
@@ -1557,7 +1521,6 @@ Philadelphia PA<tab> 1585577<tab> 1688510<tab> 736895
 When the data are separated by tabs, it is easier to use fields to extract the data from 
 the file. Fields are separated from each other by a terminating character known as a delimiter. 
 Any character may be a delimiter; however, if no delimiter cut assumes it as a tab character. 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
  
@@ -1606,7 +1569,6 @@ larger than its predecessor. We can also sort in descending sequence, in which e
 data is smaller than its predecessor. 
  
  
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 sort Command: 
@@ -1642,7 +1604,6 @@ characters with a corresponding character in a second specified set. Each set is
 string. The first character in the first set is replaced by the first character in the second set; the 
 second character in the first set is replaced by the second character in the second set and so 
 forth until all matching characters have been replaced. The strings are specified using quotes. 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
 The tr command is represented as follows: tr options string1 string2 
@@ -1691,7 +1652,6 @@ $ tr –s  ie   dd
  
 The fiend did dastardly deeds  
 Thd fdnd d dastardly ds 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 Complement: 
@@ -1724,7 +1684,6 @@ Not a duplicate - - next duplicates first 5
 5 completely duplicate lines 
 Last 3 fields duplicate: one two three 
 Last 3 fields duplicate: one two three 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
  
@@ -1772,7 +1731,6 @@ abcde Duplicate to end
 fghij Duplicate to end 
 klmno Duplicate to end 
  
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 Only Duplicated Lines (-d): 
@@ -1805,7 +1763,6 @@ $ uniq –d –f 4 uniqFile
 5 completely duplicate lines 
 Last 3 fields duplicate: one two three 
 abcde Duplicate to end 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
 Skipping Leading Characters: 
@@ -1854,7 +1811,6 @@ specified the third count is not displayed.
  
 $ wc TheRaven   
 116 994 5782  TheRaven 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 $ wc TheRaven uniqFile   
@@ -1894,7 +1850,6 @@ demonstrates the basic operation, first with two identical files and then with d
 $ cat cmpFile1 
 123456 
 7890 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
 $ cat cmpFile1.cpy  
@@ -1940,7 +1895,6 @@ The diff command shows the line-by-line difference between the two files. The fi
 is compared to the second file. The differences are identified such that the first file could be 
 modified to make it match the second file. 
  
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
 lOMoARcPSD|35376734
 lOMoARcPSD|35376734
 The command format is shown below: 
@@ -1983,7 +1937,6 @@ delete: the extra lines at the end of file1 should be deleted.
 The text of the lines to be deleted is shown. 
 Note again that there is no separator line 
 and, in this case no file2 (>) lines. 
-Downloaded by Shadow Anuj (anujshadow0@gmail.com)
  
  
 Common (comm) Command: 
