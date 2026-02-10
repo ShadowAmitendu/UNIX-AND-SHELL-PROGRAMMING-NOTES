@@ -190,7 +190,7 @@ to the monitor.
 
 To redirect to different files, we must use the stream descriptors. Actually when we use
 only one greater than sign, the system assumes that we are redirecting the output (descriptor
-1). To redirect them both, therefmore, we specify the descriptor (0, 1, or 2) and then the
+1). To redirect them both, therefore, we specify the descriptor (0, 1, or 2) and then the
 redirection operator as shown in below example:
 ```bash
 $ ls –l file noFile 1> myStdOut 2> myStdErr
@@ -524,34 +524,34 @@ $ ls | lpr
 ```
 
 Both are jobs.
-Fmoreground and Background Jobs:
+Foreground and Background Jobs:
 Because UNIX is a multitasking operating system, we can run more than one job at a
-time. However we start a job in the fmoreground, the standard input and output are locked. They
+time. However we start a job in the foreground, the standard input and output are locked. They
 are available exclusively to the current job until it completes. This means only one job that
-needs these files can run at a time. To allow multiple jobs, therefmore, UNIX defines two types of
-jobs: fmoreground and background.
+needs these files can run at a time. To allow multiple jobs, therefore, UNIX defines two types of
+jobs: foreground and background.
 ```
 
 ```
 
 ### FOREGROUND JOBS
 
-A fmoreground job is any job run under the active supervision of the user. It is started by
+A foreground job is any job run under the active supervision of the user. It is started by
 the user and may interact with the user through standard input and output. While it is running,
-no other jobs may be started. To start a fmoreground job, we simply enter a command and key
-Return. Keying Return at the end of the command starts it in the fmoreground.
-Suspending a fmoreground job While a fmoreground job is running it can be suspended. For
-example, while you are running a long sort in the fmoreground, you get a notice that you have
+no other jobs may be started. To start a foreground job, we simply enter a command and key
+Return. Keying Return at the end of the command starts it in the foreground.
+Suspending a foreground job While a foreground job is running it can be suspended. For
+example, while you are running a long sort in the foreground, you get a notice that you have
 mail.
 
 To read and respond to your mail, you must suspend the job. After you are through the
-mail you can then restart the sort. To suspend the fmoreground job, key ctrl+z. To resume it, use
-the fmoreground command (fg).
+mail you can then restart the sort. To suspend the foreground job, key ctrl+z. To resume it, use
+the foreground command (fg).
 
-Terminating a fmoreground job If for any reason we want to terminate (kill) a running
-fmoreground job, we use the cancel meta-character, ctrl+c. After the job is terminated, we key
+Terminating a foreground job If for any reason we want to terminate (kill) a running
+foreground job, we use the cancel meta-character, ctrl+c. After the job is terminated, we key
 Return to activate the command line prompt. If the job has been suspended, it must first be
-resumed using the fmoreground command.
+resumed using the foreground command.
 
 ### BACKGROUND JOBS
 
@@ -559,10 +559,10 @@ When we know a job will take a long time, we may want to run it in the backgroun
 Jobs run in the background free the keyboard and monitor so that we may use them for other
 tasks like editing files and sending mail.
 
-Note: Fmoreground and Background jobs share the keyboard and monitor.
+Note: Foreground and Background jobs share the keyboard and monitor.
 
-Any messages send to the monitor by the background job will therefmore be mingled with
-the messages from fmoreground job.
+Any messages send to the monitor by the background job will therefore be mingled with
+the messages from foreground job.
 
 Suspending, Restarting and Terminating Background jobs To suspend the background
 job, we use the stop command. To restart it, we use the bg command. To terminate the
@@ -581,10 +581,10 @@ $ kill %1
 [1] + Terminated   longjob.scr&
 ```
 
-Moving between Background and Fmoreground To move a job between the fmoreground
+Moving between Background and Foreground To move a job between the foreground
 and background, the job must be suspended. Once the job is suspended, we can move it from
-the suspended state to the background with the bg command. Because job is in the fmoreground,
-no job number is required. To move a background job to a fmoreground job, we use the fg
+the suspended state to the background with the bg command. Because job is in the foreground,
+no job number is required. To move a background job to a foreground job, we use the fg
 command.
 
 ### MULTIPLE BACKGROUND JOBS
@@ -597,10 +597,10 @@ all jobs. Whether or not they are running or stopped. For each job, it shows the
 currency, and status, running or stopped.
 ### JOB STATES
 
-At any time the job may be in one of the three states: fmoreground, background or
-stopped. When a job starts, it runs the fmoreground. While it is running, the user can stop it,
+At any time the job may be in one of the three states: foreground, background or
+stopped. When a job starts, it runs the foreground. While it is running, the user can stop it,
 terminate it, or let it run to completion. The user can restart a stopped job by moving it to
-either the fmoreground or background state. The user can also terminate a job. A terminated job
+either the foreground or background state. The user can also terminate a job. A terminated job
 no longer exists. To be terminated, a job must be running.
 While job is running it may complete or exit. A job that completes has successfully
 finished its assigned tasks. A job that exits has determined that it cannot complete its assigned
@@ -831,8 +831,8 @@ Remove All $ unalias –a % unalias *
 
 A variable is a location in memory where values can be stored. Each shell allows us to
 create, store and access values in variables. Each shell variable must have a name. The name of
-a variable must start with an alphabetic or underscmore (_) character. It then can be followed by
-zero or more alphanumeric or underscmore characters.
+a variable must start with an alphabetic or underscore (_) character. It then can be followed by
+zero or more alphanumeric or underscore characters.
 
 There are two broad classifications of variables: (TYPES)
 
@@ -1138,7 +1138,7 @@ Noglob noglob Disables wildcard expansion.
 Verbose verbose Prints commands before executing them.
 Xtrace  Prints commands and arguments before executing them.
 Emacs  Uses emacs for command-line editing.
-Ignmoreeof ignmoreeof Disallows ctrl+d to exit the shell.
+Ignoreeof ignoreeof Disallows ctrl+d to exit the shell.
 Noclobber noclobber Does not allow redirection to clobber existing file.
 Vi  Users vi for command-line editing.
 
@@ -1162,9 +1162,9 @@ before it prints the command.
 Command line Editor (emacs and vi): To specify that the emacs editor is to be used I
 the Korn shell, we turn on the emacs option. To specify that the vi editor is to be used in the
 Korn shell, we turn on the vi option. Note that these options are valid only in the Korn Shell.
-Ignmore end of file (ignmoreeof): Normally, if end of file (ctrl+d) is entered at the
-command line, the shell terminates. To disable this action we can turn on the ignmore end of file
-option, ignmoreeof. With this option, end of file generates an error message rather than
+Ignore end of file (ignoreeof): Normally, if end of file (ctrl+d) is entered at the
+command line, the shell terminates. To disable this action we can turn on the ignore end of file
+option, ignoreeof. With this option, end of file generates an error message rather than
 terminating the shell.
 No Clobber Redirection (noclobber): when output or errors are directed to a file that
 already exists, the current file is deleted and replaced by a new file. To prevent this action we
@@ -1278,7 +1278,7 @@ fo Bash pofile file  ~/. ash_p ofile  If it does t fi d a p ofile file, it looks
 (~/.bash_login).
 
 If it does not find a login file, it looks for a generic profile file (~/.profile). Whichever file
-the Bash finds, it executes it and ignmores the rest. The Bash environmental file uses the same
+the Bash finds, it executes it and ignores the rest. The Bash environmental file uses the same
 concept as the Korn shell, except that the filename is stored in the BASH_ENV variable.
 
 The Korn shell does not have logout file, but the Bash shell does. When the shell
@@ -1319,7 +1319,7 @@ the common filters:
 
 ### FILTER ACTION
 
- Mmore Passes all data from input to output, with pauses at the end of the each screen of data.
+ More Passes all data from input to output, with pauses at the end of the each screen of data.
 ### FILTER ACTION
 
 Cat
@@ -1412,7 +1412,7 @@ $ cat TheRavenV1
 ```
 
 Once up on a midnight dreary, while I pondered, weak and
-weary, Over many a quaint and curious volume of forgotten lmore
+weary, Over many a quaint and curious volume of forgotten lore
 While I nodded, nearly napping, suddenly there came a tapping,
 As of someone gently rapping, rapping at my chamber door.
  is so e visitor, I uttered,  appi g at y ha er
@@ -1533,7 +1533,7 @@ $ head -2 goodStudents TheRaven
 For all good students
 = => TheRaven <= =
 Once up on a midnight dreary, while I pondered, weak and weary,
-Over many a quaint and curious volume of forgotten lmore
+Over many a quaint and curious volume of forgotten lore
 tail Command:
 ```
 
@@ -1618,10 +1618,9 @@ New York
 Philadelphia 1585577
 Field Specification:
 While the column specification works well when the data are organized around fixed
-olu
-s, it does
-o k i othe situatio s. I the ta le elo the it a e a ges et ee
-columns 1-7 and columns 1-12. Our only choice therefmore is to use delimited fields. We have
+columns, it does
+not work in other situations. In the table below the data are arranged between
+columns 1-7 and columns 1-12. Our only choice therefore is to use delimited fields. We have
 indicated the locations of the tabs with the notation <tab> and have spaced the data to show
 how it would be displayed.
 Chicago
@@ -1742,7 +1741,7 @@ Nonmatching Translate Strings:
 
 When the translate strings are of different length, the result depends on which string is
 shorter. If string2 is shorter, the unmatched characters will all be changed to the last character
-in string2. On the other hand, if string1 is shorter, the extra characters in string2 are ignmored.
+in string2. On the other hand, if string1 is shorter, the extra characters in string2 are ignored.
 ```bash
 $ tr  aeiou   AE?  #case 1: string2 is shorter than string1 It is very
 easy to use TRANSLATE.
