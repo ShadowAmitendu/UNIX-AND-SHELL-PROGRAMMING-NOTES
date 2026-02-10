@@ -79,7 +79,7 @@ entirely new shell is created.
 
 To quit the session – that is, to log out of the system – you must be at the original login
 shell. You cannot log out from a child. If you try to log out from a child, you will get an error
-message. The Korn shell and Bash shell both display a not found message such as  “logout not found".
+message. The Korn shell and Bash shell both display a not found message such as “logout not found".
 The C shell is more specific: it reports that you are not in login shell.
 The correct command to end the session at the login shell is logout, but the exit
 command also terminates the session.
@@ -386,7 +386,7 @@ command is executed, and its output is created and then converted to a string of
 
 ## COMMAND LINE EDITING
 
-The phase  “o e is hu a applies ith a hash ealit to all fo s of o puti g. As
+The phrase "to err is human" applies with a harsh reality to all forms of computing. As
 we enter commands in UNIX command line, it is very easy to err. As long as we have keyed
 Return and we notice the mistake, we can correct it. But what if we have keyed Return?
 
@@ -503,7 +503,7 @@ in the insert mode.
 
 Edit and Execute a Previous Command: Assume that we have just executed the more
 command with a misspelled file name. In the next example, we left off the last character of
-the file a e, suh as  file  athe tha  “ile1
+the file name, such as "file" rather than "file1".
 
 1. Move to the command mode by keying Escape (esc).
 2. Using the Move-up key (k), recall the previous line.
@@ -1617,9 +1617,7 @@ New York
 7322564
 Philadelphia 1585577
 Field Specification:
-While the column specification works well when the data are organized around fixed
-columns, it does
-not work in other situations. In the table below the data are arranged between
+While the column specification works well when the data are organized around fixed columns, it does not work in other situations. In the table below the data are arranged between
 columns 1-7 and columns 1-12. Our only choice therefore is to use delimited fields. We have
 indicated the locations of the tabs with the notation <tab> and have spaced the data to show
 how it would be displayed.
